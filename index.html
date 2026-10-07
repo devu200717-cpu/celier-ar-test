@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Celier Spatial Test</title>
+
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js">
+  </script>
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #eeeeee;
+      font-family: Arial, sans-serif;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background: #eeeeee;
+    }
+
+    #ar-button {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 25px;
+      border: 0;
+      border-radius: 30px;
+      background: black;
+      color: white;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <model-viewer
+    src="./tumbler.glb"
+    alt="Celier Spatial Tumbler"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="quick-look"
+    shadow-intensity="1"
+    exposure="1"
+    camera-orbit="0deg 75deg 3m">
+
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+
+  </model-viewer>
+
+</body>
+</html>
